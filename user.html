@@ -14,28 +14,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Moul&family=Inter:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-[#1a1a1a] text-white overflow-x-hidden">
     <!-- Full Screen Loader -->
     <div
       id="main-loader"
-      class="fixed inset-0 z-[100] bg-[#092743] flex flex-col items-center justify-center transition-opacity duration-500"
-    >
+      class="fixed inset-0 z-[100] bg-[#092743] flex flex-col items-center justify-center transition-opacity duration-500">
       <!-- រូបផ្ការំដួលវិល (ប្អូនអាចប្តូរដាក់ Logo ប្អូនក៏បាន) -->
       <div class="relative w-20 h-20 mb-4">
         <div
-          class="absolute inset-0 border-4 border-[#cb9b51]/20 rounded-full"
-        ></div>
+          class="absolute inset-0 border-4 border-[#cb9b51]/20 rounded-full"></div>
         <div
-          class="absolute inset-0 border-4 border-t-[#cb9b51] rounded-full animate-spin"
-        ></div>
+          class="absolute inset-0 border-4 border-t-[#cb9b51] rounded-full animate-spin"></div>
       </div>
       <p
-        class="gold-text font-sans text-xs tracking-[0.3em] uppercase animate-pulse"
-      >
+        class="gold-text font-sans text-xs tracking-[0.3em] uppercase animate-pulse">
         Loading Profile...
       </p>
     </div>
@@ -60,94 +55,78 @@
     <div
       style="background-color: #092743"
       id="root"
-      class="bk-[#092743] min-h-screen w-full flex items-center justify-center selection:bg-[#cb9b51]/30"
-    >
+      class="bk-[#092743] min-h-screen w-full flex items-center justify-center selection:bg-[#cb9b51]/30">
       <!-- Background SVG Patterns (kept from original) -->
       <div
-        class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden opacity-30"
-      >
+        class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden opacity-30">
         <div
           class="absolute -top-10 -left-10 w-40 h-40"
-          style="transform: translateY(-32.8889px)"
-        >
+          style="transform: translateY(-32.8889px)">
           <svg
             class="w-full h-full text-[#b78923]"
             viewBox="0 0 100 100"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M50 10C55 30 75 30 75 50C75 70 55 70 50 90C45 70 25 70 25 50C25 30 45 30 50 10Z"
               stroke="currentColor"
               stroke-width="2"
-              stroke-opacity="0.6"
-            ></path>
+              stroke-opacity="0.6"></path>
             <path
               d="M50 25C53 40 68 40 68 50C68 60 53 60 50 75C47 60 32 60 32 50C32 40 47 40 50 25Z"
               stroke="currentColor"
               stroke-width="2"
-              stroke-opacity="0.6"
-            ></path>
+              stroke-opacity="0.6"></path>
           </svg>
         </div>
         <div
           class="absolute -top-10 -right-10 w-40 h-40"
-          style="transform: translateY(32.8889px)"
-        >
+          style="transform: translateY(32.8889px)">
           <svg
             class="w-full h-full text-[#b78923]"
             viewBox="0 0 100 100"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M50 10C55 30 75 30 75 50C75 70 55 70 50 90C45 70 25 70 25 50C25 30 45 30 50 10Z"
               stroke="currentColor"
               stroke-width="2"
-              stroke-opacity="0.6"
-            ></path>
+              stroke-opacity="0.6"></path>
             <path
               d="M50 25C53 40 68 40 68 50C68 60 53 60 50 75C47 60 32 60 32 50C32 40 47 40 50 25Z"
               stroke="currentColor"
               stroke-width="2"
-              stroke-opacity="0.6"
-            ></path>
+              stroke-opacity="0.6"></path>
           </svg>
         </div>
         <div
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 opacity-20"
-          style="transform: translateY(-16.4444px)"
-        >
+          style="transform: translateY(-16.4444px)">
           <svg
             class="w-full h-full text-[#cb9b51]"
             viewBox="0 0 100 100"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M50 10C55 30 75 30 75 50C75 70 55 70 50 90C45 70 25 70 25 50C25 30 45 30 50 10Z"
               stroke="currentColor"
               stroke-width="0.5"
-              stroke-opacity="0.2"
-            ></path>
+              stroke-opacity="0.2"></path>
             <path
               d="M50 25C53 40 68 40 68 50C68 60 53 60 50 75C47 60 32 60 32 50C32 40 47 40 50 25Z"
               stroke="currentColor"
               stroke-width="0.5"
-              stroke-opacity="0.2"
-            ></path>
+              stroke-opacity="0.2"></path>
           </svg>
         </div>
       </div>
       <div
-        class="relative w-full max-w-[420px] min-h-[800px] bg-[#092743] rounded-[40px] sm:rounded-[60px] shadow-[0_30px_100px_rgba(0,0,0,0.8)] overflow-hidden border border-white/5 flex flex-col"
-      >
+        class="relative w-full max-w-[420px] min-h-[800px] bg-[#092743] rounded-[40px] sm:rounded-[60px] shadow-[0_30px_100px_rgba(0,0,0,0.8)] overflow-hidden border border-white/5 flex flex-col">
         <!-- Top Right Menu Button -->
         <div class="absolute top-6 right-8 z-30">
           <button
             id="menu-btn"
-            class="p-2 rounded-full bg-black/40 backdrop-blur-md border border-[#cb9b51]/30 shadow-lg hover:scale-110 transition-transform bg-black/60 transition-colors cursor-pointer"
-          >
+            class="p-2 rounded-full bg-black/40 backdrop-blur-md border border-[#cb9b51]/30 shadow-lg hover:scale-110 transition-transform bg-black/60 transition-colors cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -158,8 +137,7 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="w-5 h-5 text-[#cb9b51]"
-            >
+              class="w-5 h-5 text-[#cb9b51]">
               <path d="M4 5h16"></path>
               <path d="M4 12h16"></path>
               <path d="M4 19h16"></path>
@@ -169,78 +147,65 @@
 
         <!-- Background SVG Patterns (kept from original) -->
         <div
-          class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden opacity-30"
-        >
+          class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden opacity-30">
           <div
             class="absolute -top-10 -left-10 w-40 h-40"
-            style="transform: translateY(-32.8889px)"
-          >
+            style="transform: translateY(-32.8889px)">
             <svg
               class="w-full h-full text-[#b78923]"
               viewBox="0 0 100 100"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M50 10C55 30 75 30 75 50C75 70 55 70 50 90C45 70 25 70 25 50C25 30 45 30 50 10Z"
                 stroke="currentColor"
                 stroke-width="2"
-                stroke-opacity="0.6"
-              ></path>
+                stroke-opacity="0.6"></path>
               <path
                 d="M50 25C53 40 68 40 68 50C68 60 53 60 50 75C47 60 32 60 32 50C32 40 47 40 50 25Z"
                 stroke="currentColor"
                 stroke-width="2"
-                stroke-opacity="0.6"
-              ></path>
+                stroke-opacity="0.6"></path>
             </svg>
           </div>
           <div
             class="absolute -top-10 -right-10 w-40 h-40"
-            style="transform: translateY(32.8889px)"
-          >
+            style="transform: translateY(32.8889px)">
             <svg
               class="w-full h-full text-[#b78923]"
               viewBox="0 0 100 100"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M50 10C55 30 75 30 75 50C75 70 55 70 50 90C45 70 25 70 25 50C25 30 45 30 50 10Z"
                 stroke="currentColor"
                 stroke-width="2"
-                stroke-opacity="0.6"
-              ></path>
+                stroke-opacity="0.6"></path>
               <path
                 d="M50 25C53 40 68 40 68 50C68 60 53 60 50 75C47 60 32 60 32 50C32 40 47 40 50 25Z"
                 stroke="currentColor"
                 stroke-width="2"
-                stroke-opacity="0.6"
-              ></path>
+                stroke-opacity="0.6"></path>
             </svg>
           </div>
           <div
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 opacity-20"
-            style="transform: translateY(-16.4444px)"
-          >
+            style="transform: translateY(-16.4444px)">
             <svg
               class="w-full h-full text-[#cb9b51]"
               viewBox="0 0 100 100"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M50 10C55 30 75 30 75 50C75 70 55 70 50 90C45 70 25 70 25 50C25 30 45 30 50 10Z"
                 stroke="currentColor"
                 stroke-width="0.5"
-                stroke-opacity="0.2"
-              ></path>
+                stroke-opacity="0.2"></path>
               <path
                 d="M50 25C53 40 68 40 68 50C68 60 53 60 50 75C47 60 32 60 32 50C32 40 47 40 50 25Z"
                 stroke="currentColor"
                 stroke-width="0.5"
-                stroke-opacity="0.2"
-              ></path>
+                stroke-opacity="0.2"></path>
             </svg>
           </div>
         </div>
@@ -254,8 +219,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-          "
-        >
+          ">
           <a>
             <img
               id="company-logo"
@@ -263,8 +227,7 @@
               class="w-full h-full object-cover"
               referrerpolicy="no-referrer"
               src="#"
-              style="width: 100px; object-fit: cover; border-radius: 15px"
-            />
+              style="width: 100px; object-fit: cover; border-radius: 15px" />
           </a>
           <!-- <h1
             class="text-4xl sm:text-5xl font-khmer-moul gold-text mb-1 drop-shadow-lg"
@@ -280,22 +243,18 @@
         <div class="relative z-10 flex justify-center mb-8 sm:mb-10">
           <div class="relative w-80 h-80 sm:w-80 sm:h-80">
             <div
-              class="absolute inset-0 rounded-full gold-gradient animate-pulse opacity-50 blur-xl"
-            ></div>
+              class="absolute inset-0 rounded-full gold-gradient animate-pulse opacity-50 blur-xl"></div>
             <div
-              class="absolute inset-0 rounded-full border-[4px] border-[#cb9b51] shadow-[0_0_30px_rgba(203,155,81,0.5)]"
-            ></div>
+              class="absolute inset-0 rounded-full border-[4px] border-[#cb9b51] shadow-[0_0_30px_rgba(203,155,81,0.5)]"></div>
             <div
-              class="absolute inset-2 rounded-full overflow-hidden bg-[#1a1a1a]"
-            >
+              class="absolute inset-2 rounded-full overflow-hidden bg-[#1a1a1a]">
               <!-- Added a real-looking landscape image similar to the reference -->
               <img
                 id="user-img"
                 alt="Profile"
                 class="w-full h-full object-cover"
                 referrerpolicy="no-referrer"
-                src="#"
-              />
+                src="#" />
             </div>
           </div>
         </div>
@@ -304,23 +263,19 @@
         <div class="relative z-10 text-center mb-8 sm:mb-10 px-6">
           <h2
             id="user-name"
-            class="text-3xl sm:text-3xl font-khmer-moul gold-text mb-2 drop-shadow-md"
-          ></h2>
+            class="text-3xl sm:text-3xl font-khmer-moul gold-text mb-2 drop-shadow-md"></h2>
           <p
             id="user-title"
-            class="text-xs sm:text-sm font-sans font-bold gold-text tracking-wide opacity-80"
-          ></p>
+            class="text-xs sm:text-sm font-sans font-bold gold-text tracking-wide opacity-80"></p>
         </div>
 
         <!-- Save Contact Button -->
         <div
           style="margin-top: 30px"
-          class="relative z-10 px-6 mb-8 flex justify-center gap-4"
-        >
+          class="relative z-10 px-6 mb-8 flex justify-center gap-4">
           <button
             id="save-contact-btn"
-            class="flex items-center gap-2 px-6 py-3 rounded-full gold-gradient text-black font-bold text-1xs uppercase tracking-widest shadow-lg hover:scale-110 transition-transform cursor-pointer"
-          >
+            class="flex items-center gap-2 px-6 py-3 rounded-full gold-gradient text-black font-bold text-1xs uppercase tracking-widest shadow-lg hover:scale-110 transition-transform cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -331,8 +286,7 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="w-4 h-4"
-            >
+              class="w-4 h-4">
               <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
               <line x1="19" x2="19" y1="8" y2="14"></line>
@@ -347,21 +301,17 @@
           <!-- Phone -->
           <a
             id="link-phone"
-            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform"
-          >
+            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform">
             <div
-              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"
-            ></div>
+              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"></div>
             <div
               class="absolute inset-0 opacity-10 pointer-events-none"
               style="
                 background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c2 10 10 10 10 20s-8 10-10 20c-2-10-10-10-10-20s8-10 10-20z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E&quot;);
                 background-size: 20px 20px;
-              "
-            ></div>
+              "></div>
             <div
-              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15"
-            >
+              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -372,43 +322,35 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-4 h-4 sm:w-5 sm:h-5 text-black"
-              >
+                class="w-4 h-4 sm:w-5 sm:h-5 text-black">
                 <path
-                  d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
-                ></path>
+                  d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
               </svg>
             </div>
             <div class="relative z-10 flex flex-col min-w-0">
               <span
-                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate"
-              >
+                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate">
                 Contact
               </span>
               <span
-                class="text-xs font-bold text-black font-sans truncate"
-              ></span>
+                class="text-xs font-bold text-black font-sans truncate"></span>
             </div>
           </a>
           <!-- Facebook -->
           <a
             id="link-fb"
             target="_blank"
-            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform"
-          >
+            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform">
             <div
-              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"
-            ></div>
+              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"></div>
             <div
               class="absolute inset-0 opacity-10 pointer-events-none"
               style="
                 background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c2 10 10 10 10 20s-8 10-10 20c-2-10-10-10-10-20s8-10 10-20z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E&quot;);
                 background-size: 20px 20px;
-              "
-            ></div>
+              "></div>
             <div
-              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15"
-            >
+              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -419,42 +361,33 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-4 h-4 sm:w-5 sm:h-5 text-black"
-              >
+                class="w-4 h-4 sm:w-5 sm:h-5 text-black">
                 <path
-                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                ></path>
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </div>
             <div class="relative z-10 flex flex-col min-w-0">
               <span
-                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate"
-                >Facebook</span
-              >
+                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate">Facebook</span>
               <span
-                class="text-xs font-bold text-black font-sans truncate"
-              ></span>
+                class="text-xs font-bold text-black font-sans truncate"></span>
             </div>
           </a>
           <!-- Telegram -->
           <a
             id="link-tg"
             target="_blank"
-            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform"
-          >
+            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform">
             <div
-              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"
-            ></div>
+              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"></div>
             <div
               class="absolute inset-0 opacity-10 pointer-events-none"
               style="
                 background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c2 10 10 10 10 20s-8 10-10 20c-2-10-10-10-10-20s8-10 10-20z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E&quot;);
                 background-size: 20px 20px;
-              "
-            ></div>
+              "></div>
             <div
-              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15"
-            >
+              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -465,43 +398,34 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-4 h-4 sm:w-5 sm:h-5 text-black"
-              >
+                class="w-4 h-4 sm:w-5 sm:h-5 text-black">
                 <path
-                  d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
-                ></path>
+                  d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
                 <path d="m21.854 2.147-10.94 10.939"></path>
               </svg>
             </div>
             <div class="relative z-10 flex flex-col min-w-0">
               <span
-                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate"
-                >Telegram</span
-              >
+                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate">Telegram</span>
               <span
-                class="text-xs font-bold text-black font-sans truncate"
-              ></span>
+                class="text-xs font-bold text-black font-sans truncate"></span>
             </div>
           </a>
           <!-- LinkedIn -->
           <a
             target="_blank"
             id="link-linkin"
-            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform"
-          >
+            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform">
             <div
-              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"
-            ></div>
+              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"></div>
             <div
               class="absolute inset-0 opacity-10 pointer-events-none"
               style="
                 background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c2 10 10 10 10 20s-8 10-10 20c-2-10-10-10-10-20s8-10 10-20z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E&quot;);
                 background-size: 20px 20px;
-              "
-            ></div>
+              "></div>
             <div
-              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15"
-            >
+              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -512,44 +436,35 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-4 h-4 sm:w-5 sm:h-5 text-black"
-              >
+                class="w-4 h-4 sm:w-5 sm:h-5 text-black">
                 <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                ></path>
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                 <rect width="4" height="12" x="2" y="9"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </div>
             <div class="relative z-10 flex flex-col min-w-0">
               <span
-                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate"
-                >LinkedIn</span
-              >
+                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate">LinkedIn</span>
               <span
-                class="text-xs font-bold text-black font-sans truncate"
-              ></span>
+                class="text-xs font-bold text-black font-sans truncate"></span>
             </div>
           </a>
           <!-- WhatsApp -->
           <a
             id="link-wa"
             target="_blank"
-            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform"
-          >
+            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform">
             <div
-              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"
-            ></div>
+              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"></div>
             <div
               class="absolute inset-0 opacity-10 pointer-events-none"
               style="
                 background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c2 10 10 10 10 20s-8 10-10 20c-2-10-10-10-10-20s8-10 10-20z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E&quot;);
                 background-size: 20px 20px;
-              "
-            ></div>
+              "></div>
             <div
-              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15"
-            >
+              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -560,42 +475,33 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-4 h-4 sm:w-5 sm:h-5 text-black"
-              >
+                class="w-4 h-4 sm:w-5 sm:h-5 text-black">
                 <path
-                  d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
-                ></path>
+                  d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path>
               </svg>
             </div>
             <div class="relative z-10 flex flex-col min-w-0">
               <span
-                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate"
-                >WhatsApp</span
-              >
+                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate">WhatsApp</span>
               <span
-                class="text-xs font-bold text-black font-sans truncate"
-              ></span>
+                class="text-xs font-bold text-black font-sans truncate"></span>
             </div>
           </a>
           <!-- Email -->
           <a
             id="link-email"
             target="_blank"
-            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform"
-          >
+            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform">
             <div
-              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"
-            ></div>
+              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"></div>
             <div
               class="absolute inset-0 opacity-10 pointer-events-none"
               style="
                 background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c2 10 10 10 10 20s-8 10-10 20c-2-10-10-10-10-20s8-10 10-20z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E&quot;);
                 background-size: 20px 20px;
-              "
-            ></div>
+              "></div>
             <div
-              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15"
-            >
+              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15">
               <!-- New Email Icon -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -607,20 +513,16 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-4 h-4 sm:w-5 sm:h-5 text-black"
-              >
+                class="w-4 h-4 sm:w-5 sm:h-5 text-black">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
             </div>
             <div class="relative z-10 flex flex-col min-w-0">
               <span
-                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate"
-                >Email</span
-              >
+                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate">Email</span>
               <span
-                class="text-xs font-bold text-black font-sans truncate"
-              ></span>
+                class="text-xs font-bold text-black font-sans truncate"></span>
             </div>
           </a>
 
@@ -628,21 +530,17 @@
           <a
             id="link-tiktok"
             target="_blank"
-            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform"
-          >
+            class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform">
             <div
-              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"
-            ></div>
+              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"></div>
             <div
               class="absolute inset-0 opacity-10 pointer-events-none"
               style="
                 background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c2 10 10 10 10 20s-8 10-10 20c-2-10-10-10-10-20s8-10 10-20z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E&quot;);
                 background-size: 20px 20px;
-              "
-            ></div>
+              "></div>
             <div
-              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15"
-            >
+              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15">
               <!-- TikTok Icon -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -650,42 +548,33 @@
                 height="24"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="w-4 h-4 sm:w-5 sm:h-5 text-black"
-              >
+                class="w-4 h-4 sm:w-5 sm:h-5 text-black">
                 <path
-                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"
-                ></path>
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path>
               </svg>
             </div>
             <div class="relative z-10 flex flex-col min-w-0">
               <span
-                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate"
-                >TikTok</span
-              >
+                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate">TikTok</span>
               <span
-                class="text-xs font-bold text-black font-sans truncate"
-              ></span>
+                class="text-xs font-bold text-black font-sans truncate"></span>
             </div>
           </a>
           <!-- Website -->
           <a
             target="_blank"
             class="relative flex items-center gap-3 p-3 rounded-xl overflow-hidden group hover:scale-110 transition-transform"
-            id="link-web"
-          >
+            id="link-web">
             <div
-              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"
-            ></div>
+              class="absolute inset-0 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity"></div>
             <div
               class="absolute inset-0 opacity-10 pointer-events-none"
               style="
                 background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c2 10 10 10 10 20s-8 10-10 20c-2-10-10-10-10-20s8-10 10-20z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E&quot;);
                 background-size: 20px 20px;
-              "
-            ></div>
+              "></div>
             <div
-              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15"
-            >
+              class="relative z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/15">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -696,23 +585,18 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-4 h-4 sm:w-5 sm:h-5 text-black"
-              >
+                class="w-4 h-4 sm:w-5 sm:h-5 text-black">
                 <circle cx="12" cy="12" r="10"></circle>
                 <path
-                  d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
-                ></path>
+                  d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
                 <path d="M2 12h20"></path>
               </svg>
             </div>
             <div class="relative z-10 flex flex-col min-w-0">
               <span
-                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate"
-                >Website</span
-              >
+                class="text-[15px] sm:text-[15px] font-bold uppercase tracking-wider text-[#001F3F] font-sans truncate">Website</span>
               <span
-                class="text-xs font-bold text-black font-sans truncate"
-              ></span>
+                class="text-xs font-bold text-black font-sans truncate"></span>
             </div>
           </a>
         </div>
@@ -720,21 +604,17 @@
         <!-- Scan QR Button -->
         <div
           id="modal-qr"
-          class="modal-hidden modal-transition fixed inset-0 z-50 bg-[#000000ea] flex items-center justify-center p-6 backdrop-blur-sm"
-        >
+          class="modal-hidden modal-transition fixed inset-0 z-50 bg-[#000000ea] flex items-center justify-center p-6 backdrop-blur-sm">
           <div
-            class="bg-[#0a0a0a] border border-[#cb9b51]/30 rounded-[30px] p-6 w-full max-w-[320px] flex flex-col items-center shadow-[0_0_50px_rgba(203,155,81,0.15)] relative transform transition-transform duration-300 scale-95 origin-center"
-          >
+            class="bg-[#0a0a0a] border border-[#cb9b51]/30 rounded-[30px] p-6 w-full max-w-[320px] flex flex-col items-center shadow-[0_0_50px_rgba(203,155,81,0.15)] relative transform transition-transform duration-300 scale-95 origin-center">
             <!-- រូបភាព QR ដែលនឹងលោតតាម ID ស្វ័យប្រវត្តិ -->
             <div
-              class="bg-black p-4 rounded-xl w-full aspect-square flex items-center justify-center mb-6 relative overflow-hidden"
-            >
+              class="bg-black p-4 rounded-xl w-full aspect-square flex items-center justify-center mb-6 relative overflow-hidden">
               <img
                 id="qr-image"
-                src=""
+                src
                 alt="QR Code"
-                class="w-full h-full object-contain"
-              />
+                class="w-full h-full object-contain" />
             </div>
 
             <h3 class="gold-text font-bold text-base mb-1 font-sans">
@@ -742,15 +622,13 @@
             </h3>
             <p
               id="qr-link-text"
-              class="text-white/50 text-[10px] mb-8 tracking-widest font-mono truncate px-4 w-full text-center"
-            >
+              class="text-white/50 text-[10px] mb-8 tracking-widest font-mono truncate px-4 w-full text-center">
               <!-- Link នឹងបង្ហាញនៅទីនេះ -->
             </p>
 
             <button
               id="close-qr-btn"
-              class="w-full py-3 rounded-full gold-gradient text-black font-bold text-[11px] uppercase tracking-[0.2em] shadow-lg hover:scale-110 transition-transform cursor-pointer"
-            >
+              class="w-full py-3 rounded-full gold-gradient text-black font-bold text-[11px] uppercase tracking-[0.2em] shadow-lg hover:scale-110 transition-transform cursor-pointer">
               CLOSE
             </button>
           </div>
@@ -758,18 +636,15 @@
 
         <!-- Footer -->
         <div
-          class="relative z-10 mt-auto pb-10 flex flex-col items-center gap-2"
-        >
+          class="relative z-10 mt-auto pb-10 flex flex-col items-center gap-2">
           <div class="flex items-center gap-4">
             <div class="h-[1px] w-12 gold-gradient opacity-50"></div>
             <div class="relative z-10 px-6 mb-6 flex justify-center">
               <button
                 id="qr-btn"
-                class="flex flex-col items-center gap-2 group cursor-pointer hover:scale-110 transition-transform"
-              >
+                class="flex flex-col items-center gap-2 group cursor-pointer hover:scale-110 transition-transform">
                 <div
-                  class="p-3 rounded-2xl bg-white/5 border border-[#cb9b51]/30 group-hover:border-[#cb9b51] group-hover:shadow-[0_0_15px_rgba(203,155,81,0.2)] transition-all"
-                >
+                  class="p-3 rounded-2xl bg-white/5 border border-[#cb9b51]/30 group-hover:border-[#cb9b51] group-hover:shadow-[0_0_15px_rgba(203,155,81,0.2)] transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -780,8 +655,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="w-8 h-8 text-[#cb9b51]"
-                  >
+                    class="w-8 h-8 text-[#cb9b51]">
                     <rect width="5" height="5" x="3" y="3" rx="1"></rect>
                     <rect width="5" height="5" x="16" y="3" rx="1"></rect>
                     <rect width="5" height="5" x="3" y="16" rx="1"></rect>
@@ -797,8 +671,7 @@
                   </svg>
                 </div>
                 <span
-                  class="text-[10px] font-bold gold-text uppercase tracking-widest opacity-70"
-                >
+                  class="text-[10px] font-bold gold-text uppercase tracking-widest opacity-70">
                   Scan to Connect
                 </span>
               </button>
@@ -807,8 +680,7 @@
             <div class="h-[1px] w-12 gold-gradient opacity-50"></div>
           </div>
           <p
-            class="text-sm font-sans font-bold gold-text tracking-[0.2em] uppercase mt-1"
-          >
+            class="text-sm font-sans font-bold gold-text tracking-[0.2em] uppercase mt-1">
             Rumduol Premium
           </p>
           <p class="text-[10px] font-sans gold-text opacity-40 tracking-widest">
@@ -831,32 +703,26 @@
     <!-- ២. Modal QR (កែសម្រួល ID ឱ្យត្រូវតាម Script) -->
     <div
       id="modal-qr"
-      class="modal-hidden modal-transition fixed inset-0 z-50 bg-[#000000ea] flex items-center justify-center p-6 backdrop-blur-sm"
-    >
+      class="modal-hidden modal-transition fixed inset-0 z-50 bg-[#000000ea] flex items-center justify-center p-6 backdrop-blur-sm">
       <div
-        class="bg-[#0a0a0a] border border-[#cb9b51]/30 rounded-[30px] p-6 w-full max-w-[320px] flex flex-col items-center shadow-[0_0_50px_rgba(203,155,81,0.15)] relative transform transition-transform duration-300 scale-95 origin-center"
-      >
+        class="bg-[#0a0a0a] border border-[#cb9b51]/30 rounded-[30px] p-6 w-full max-w-[320px] flex flex-col items-center shadow-[0_0_50px_rgba(203,155,81,0.15)] relative transform transition-transform duration-300 scale-95 origin-center">
         <div
-          class="bg-black p-4 rounded-xl w-full aspect-square flex items-center justify-center mb-6 relative overflow-hidden"
-        >
+          class="bg-black p-4 rounded-xl w-full aspect-square flex items-center justify-center mb-6 relative overflow-hidden">
           <!-- ថែម id="qr-image" ត្រង់នេះ -->
           <img
             id="qr-image"
-            src=""
+            src
             alt="QR Code"
-            class="w-full h-full object-contain"
-          />
+            class="w-full h-full object-contain" />
         </div>
         <h3 class="gold-text font-bold text-base mb-1 font-sans">My Contact</h3>
         <!-- ថែម id="qr-link-text" ត្រង់នេះ -->
         <p
           id="qr-link-text"
-          class="text-white/50 text-[10px] mb-8 tracking-widest font-mono text-center break-all px-4"
-        ></p>
+          class="text-white/50 text-[10px] mb-8 tracking-widest font-mono text-center break-all px-4"></p>
         <button
           id="close-qr-btn"
-          class="w-full py-3 rounded-full gold-gradient text-black font-bold text-[11px] uppercase tracking-[0.2em] shadow-lg hover:scale-110 transition-transform"
-        >
+          class="w-full py-3 rounded-full gold-gradient text-black font-bold text-[11px] uppercase tracking-[0.2em] shadow-lg hover:scale-110 transition-transform">
           CLOSE
         </button>
       </div>
@@ -867,12 +733,10 @@
     <!-- ======================= -->
     <div
       id="modal-menu"
-      class="modal-hidden modal-transition fixed inset-0 z-[60] bg-black/90 flex flex-col items-center justify-center"
-    >
+      class="modal-hidden modal-transition fixed inset-0 z-[60] bg-black/90 flex flex-col items-center justify-center">
       <button
         id="close-menu-btn"
-        class="absolute top-6 right-10 p-3 rounded-full text-[#cb9b51] hover:bg-white/10 transition-colors cursor-pointer"
-      >
+        class="absolute top-6 right-10 p-3 rounded-full text-[#cb9b51] hover:bg-white/10 transition-colors cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="28"
@@ -882,8 +746,7 @@
           stroke="currentColor"
           stroke-width="2"
           stroke-linecap="round"
-          stroke-linejoin="round"
-        >
+          stroke-linejoin="round">
           <path d="M18 6 6 18" />
           <path d="m6 6 12 12" />
         </svg>
@@ -892,28 +755,24 @@
       <div class="flex flex-col gap-8 text-center">
         <button
           id="nav-home"
-          class="text-3xl font-sans font-bold text-white hover:text-[#cb9b51] transition-colors tracking-wide hover:scale-110 transition-transform"
-        >
+          class="text-3xl font-sans font-bold text-white hover:text-[#cb9b51] transition-colors tracking-wide hover:scale-110 transition-transform">
           Home
         </button>
         <button
           id="nav-about"
-          class="text-3xl font-sans font-bold text-white hover:text-[#cb9b51] transition-colors tracking-wide hover:scale-110 transition-transform"
-        >
+          class="text-3xl font-sans font-bold text-white hover:text-[#cb9b51] transition-colors tracking-wide hover:scale-110 transition-transform">
           About US
         </button>
         <button
           id="nav-share"
-          class="text-3xl font-sans font-bold text-white hover:text-[#cb9b51] transition-colors tracking-wide hover:scale-110 transition-transform"
-        >
+          class="text-3xl font-sans font-bold text-white hover:text-[#cb9b51] transition-colors tracking-wide hover:scale-110 transition-transform">
           Share Card
         </button>
         <a
           href="https://t.me/farors07"
           target="_blank"
-          class="text-3xl font-sans font-bold text-white hover:text-[#cb9b51] transition-colors tracking-wide hover:scale-110 transition-transform"
-          >Contact Us</a
-        >
+          class="text-3xl font-sans font-bold text-white hover:text-[#cb9b51] transition-colors tracking-wide hover:scale-110 transition-transform">Contact
+          Us</a>
       </div>
     </div>
 
@@ -922,99 +781,82 @@
     <!-- ======================= -->
     <div
       id="page-about"
-      class="modal-hidden modal-transition fixed inset-0 z-[55] bg-[#092743] overflow-y-auto custom-scrollbar"
-    >
+      class="modal-hidden modal-transition fixed inset-0 z-[55] bg-[#092743] overflow-y-auto custom-scrollbar">
       <!-- Background SVG Patterns (kept from original) -->
       <div
-        class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden opacity-30"
-      >
+        class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden opacity-30">
         <div
           class="absolute -top-10 -left-10 w-40 h-40"
-          style="transform: translateY(-32.8889px)"
-        >
+          style="transform: translateY(-32.8889px)">
           <svg
             class="w-full h-full text-[#b78923]"
             viewBox="0 0 100 100"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M50 10C55 30 75 30 75 50C75 70 55 70 50 90C45 70 25 70 25 50C25 30 45 30 50 10Z"
               stroke="currentColor"
               stroke-width="2"
-              stroke-opacity="0.6"
-            ></path>
+              stroke-opacity="0.6"></path>
             <path
               d="M50 25C53 40 68 40 68 50C68 60 53 60 50 75C47 60 32 60 32 50C32 40 47 40 50 25Z"
               stroke="currentColor"
               stroke-width="2"
-              stroke-opacity="0.6"
-            ></path>
+              stroke-opacity="0.6"></path>
           </svg>
         </div>
         <div
           class="absolute -top-10 -right-10 w-40 h-40"
-          style="transform: translateY(32.8889px)"
-        >
+          style="transform: translateY(32.8889px)">
           <svg
             class="w-full h-full text-[#b78923]"
             viewBox="0 0 100 100"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M50 10C55 30 75 30 75 50C75 70 55 70 50 90C45 70 25 70 25 50C25 30 45 30 50 10Z"
               stroke="currentColor"
               stroke-width="2"
-              stroke-opacity="0.6"
-            ></path>
+              stroke-opacity="0.6"></path>
             <path
               d="M50 25C53 40 68 40 68 50C68 60 53 60 50 75C47 60 32 60 32 50C32 40 47 40 50 25Z"
               stroke="currentColor"
               stroke-width="2"
-              stroke-opacity="0.6"
-            ></path>
+              stroke-opacity="0.6"></path>
           </svg>
         </div>
         <div
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 opacity-20"
-          style="transform: translateY(-16.4444px)"
-        >
+          style="transform: translateY(-16.4444px)">
           <svg
             class="w-full h-full text-[#cb9b51]"
             viewBox="0 0 100 100"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M50 10C55 30 75 30 75 50C75 70 55 70 50 90C45 70 25 70 25 50C25 30 45 30 50 10Z"
               stroke="currentColor"
               stroke-width="0.5"
-              stroke-opacity="0.2"
-            ></path>
+              stroke-opacity="0.2"></path>
             <path
               d="M50 25C53 40 68 40 68 50C68 60 53 60 50 75C47 60 32 60 32 50C32 40 47 40 50 25Z"
               stroke="currentColor"
               stroke-width="0.5"
-              stroke-opacity="0.2"
-            ></path>
+              stroke-opacity="0.2"></path>
           </svg>
         </div>
       </div>
       <div
-        class="max-w-[420px] mx-auto min-h-screen rounded-[40px] sm:rounded-[60px] shadow-[0_30px_100px_rgba(0,0,0,0.8)] overflow-hidden border border-white/5 px-6 py-12 relative flex flex-col"
-      >
+        class="max-w-[420px] mx-auto min-h-screen rounded-[40px] sm:rounded-[60px] shadow-[0_30px_100px_rgba(0,0,0,0.8)] overflow-hidden border border-white/5 px-6 py-12 relative flex flex-col">
         <!-- Header area -->
         <div
-          class="flex items-center justify-between mb-10 pb-4 border-b border-[#cb9b51]/20 sticky top-0 bg-[#092743]/90 backdrop-blur-md pt-6 z-10"
-        >
+          class="flex items-center justify-between mb-10 pb-4 border-b border-[#cb9b51]/20 sticky top-0 bg-[#092743]/90 backdrop-blur-md pt-6 z-10">
           <h1 class="text-2xl font-bold gold-text font-sans tracking-wide">
             About US
           </h1>
           <button
             id="close-about-btn"
-            class="p-2 rounded-full bg-black border border-[#cb9b51]/40 text-[#cb9b51] hover: bg-[#cb9b51]/10 transition-colors cursor-pointer"
-          >
+            class="p-2 rounded-full bg-black border border-[#cb9b51]/40 text-[#cb9b51] hover: bg-[#cb9b51]/10 transition-colors cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -1024,8 +866,7 @@
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+              stroke-linejoin="round">
               <path d="M18 6 6 18" />
               <path d="m6 6 12 12" />
             </svg>
@@ -1037,9 +878,7 @@
           <!-- Khmer Section -->
           <div class="space-y-5">
             <span
-              class="inline-block px-3 py-1 rounded border border-[#cb9b51]/30 text-[#cb9b51] text-xs font-bold tracking-widest mb-2 font-khmer-moul"
-              >ភាសាខ្មែរ</span
-            >
+              class="inline-block px-3 py-1 rounded border border-[#cb9b51]/30 text-[#cb9b51] text-xs font-bold tracking-widest mb-2 font-khmer-moul">ភាសាខ្មែរ</span>
             <h2 class="text-white text-lg font-bold leading-relaxed">
               លើកកម្ពស់អត្តសញ្ញាណវិជ្ជាជីវៈរបស់អ្នក
             </h2>
@@ -1056,52 +895,45 @@
             </p>
             <ul class="space-y-4 mt-2">
               <li class="bg-white/5 p-4 rounded-xl border border-white/5">
-                <strong class="gold-text block mb-2"
-                  >ភាពច្នៃប្រឌិត (Creativity):</strong
-                >
-                <span class="text-sm leading-relaxed opacity-80"
-                  >យើងជឿជាក់ថាចំណាប់អារម្មណ៍ដំបូងគឺជាសិល្បៈ។ រចនាបថរបស់យើង ដូចជា
+                <strong class="gold-text block mb-2">ភាពច្នៃប្រឌិត
+                  (Creativity):</strong>
+                <span
+                  class="text-sm leading-relaxed opacity-80">យើងជឿជាក់ថាចំណាប់អារម្មណ៍ដំបូងគឺជាសិល្បៈ។
+                  រចនាបថរបស់យើង ដូចជា
                   "Rumduol Edition" ផ្តោតសំខាន់លើរូបភាពកម្រិតខ្ពស់
                   និងប្លង់ដែលទាក់ទាញ
-                  ដើម្បីបង្ហាញពីអត្តសញ្ញាណពិតនៃម៉ាកយីហោរបស់អ្នក។</span
-                >
+                  ដើម្បីបង្ហាញពីអត្តសញ្ញាណពិតនៃម៉ាកយីហោរបស់អ្នក។</span>
               </li>
               <li class="bg-white/5 p-4 rounded-xl border border-white/5">
                 <strong class="gold-text block mb-2">ឯកជនភាព (Privacy):</strong>
-                <span class="text-sm leading-relaxed opacity-80"
-                  >យើងគោរពព្រំដែននៃព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នក។
+                <span
+                  class="text-sm leading-relaxed opacity-80">យើងគោរពព្រំដែននៃព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នក។
                   អ្នកមានសិទ្ធិពេញលេញក្នុងការគ្រប់គ្រងព័ត៌មានដែលត្រូវចែករំលែក
-                  ដើម្បីធានាថាទិន្នន័យវិជ្ជាជីវៈរបស់អ្នកស្ថិតនៅក្រោមការគ្រប់គ្រងរបស់អ្នកជានិច្ច។</span
-                >
+                  ដើម្បីធានាថាទិន្នន័យវិជ្ជាជីវៈរបស់អ្នកស្ថិតនៅក្រោមការគ្រប់គ្រងរបស់អ្នកជានិច្ច។</span>
               </li>
               <li class="bg-white/5 p-4 rounded-xl border border-white/5">
-                <strong class="gold-text block mb-2"
-                  >សុវត្ថិភាព (Security):</strong
-                >
-                <span class="text-sm leading-relaxed opacity-80"
-                  >ការរក្សាសុវត្ថិភាពទិន្នន័យគឺជាបេសកកម្មរបស់យើង។
+                <strong class="gold-text block mb-2">សុវត្ថិភាព
+                  (Security):</strong>
+                <span
+                  class="text-sm leading-relaxed opacity-80">ការរក្សាសុវត្ថិភាពទិន្នន័យគឺជាបេសកកម្មរបស់យើង។
                   យើងប្រើប្រាស់ប្រព័ន្ធការពារកម្រិតខ្ពស់
                   ដើម្បីធានាថាព័ត៌មានទំនាក់ទំនងរបស់អ្នកត្រូវបានរក្សាទុកដោយសុវត្ថិភាពបំផុត
-                  និងជៀសផុតពីការចូលប្រើប្រាស់ដោយគ្មានការអនុញ្ញាត។</span
-                >
+                  និងជៀសផុតពីការចូលប្រើប្រាស់ដោយគ្មានការអនុញ្ញាត។</span>
               </li>
             </ul>
             <p
-              class="text-sm italic opacity-80 mt-4 border-l-2 border-[#cb9b51] pl-4 leading-loose"
-            >
+              class="text-sm italic opacity-80 mt-4 border-l-2 border-[#cb9b51] pl-4 leading-loose">
               ទទួលយកបទពិសោធន៍នៃការតភ្ជាប់ទំនាក់ទំនងដែលឆ្លាតវៃ ច្នៃប្រឌិត
               និងមានសុវត្ថិភាពបំផុត។
             </p>
           </div>
           <div
-            class="h-px w-full bg-gradient-to-r from-transparent via-[#cb9b51]/30 to-transparent"
-          ></div>
+            class="h-px w-full bg-gradient-to-r from-transparent via-[#cb9b51]/30 to-transparent"></div>
           <!-- English Section -->
           <div class="space-y-5">
             <span
-              class="inline-block px-3 py-1 rounded border border-[#cb9b51]/30 text-[#cb9b51] text-xs font-bold tracking-widest uppercase mb-2"
-              >English Version</span
-            >
+              class="inline-block px-3 py-1 rounded border border-[#cb9b51]/30 text-[#cb9b51] text-xs font-bold tracking-widest uppercase mb-2">English
+              Version</span>
             <h2 class="text-white text-xl font-bold leading-tight">
               Elevating Your Professional Identity
             </h2>
@@ -1119,33 +951,29 @@
             <ul class="space-y-4 mt-2">
               <li class="bg-white/5 p-4 rounded-xl border border-white/5">
                 <strong class="gold-text block mb-1">Creativity:</strong>
-                <span class="text-sm opacity-80"
-                  >We believe your first impression should be a masterpiece. Our
+                <span class="text-sm opacity-80">We believe your first
+                  impression should be a masterpiece. Our
                   designs, like the "Rumduol Edition," focus on premium visuals,
                   glassmorphism effects, and intuitive layouts that reflect your
-                  unique brand.</span
-                >
+                  unique brand.</span>
               </li>
               <li class="bg-white/5 p-4 rounded-xl border border-white/5">
                 <strong class="gold-text block mb-1">Privacy:</strong>
-                <span class="text-sm opacity-80"
-                  >We respect your personal boundaries. You have full control
+                <span class="text-sm opacity-80">We respect your personal
+                  boundaries. You have full control
                   over what information you share and with whom, ensuring your
-                  professional data remains in your hands.</span
-                >
+                  professional data remains in your hands.</span>
               </li>
               <li class="bg-white/5 p-4 rounded-xl border border-white/5">
                 <strong class="gold-text block mb-1">Security:</strong>
-                <span class="text-sm opacity-80"
-                  >Your data integrity is our mission. We utilize robust
+                <span class="text-sm opacity-80">Your data integrity is our
+                  mission. We utilize robust
                   encryption and secure hosting to ensure that your contact
-                  information is protected against unauthorized access.</span
-                >
+                  information is protected against unauthorized access.</span>
               </li>
             </ul>
             <p
-              class="text-sm italic opacity-80 mt-4 border-l-2 border-[#cb9b51] pl-4"
-            >
+              class="text-sm italic opacity-80 mt-4 border-l-2 border-[#cb9b51] pl-4">
               Experience a smarter, more creative, and safer way to connect.
             </p>
           </div>
@@ -1169,7 +997,7 @@
         const CONFIG = {
           // 🔗 URL Web App ថ្មីរបស់បង (ត្រូវប្រាកដថាអត់មានដកឃ្លា)
           apiURL:
-            "https://script.google.com/macros/s/AKfycbxEvEMXaXtTPYyPZHZqgBAbJ_53dYWjSKJCdgjxpJZf2mFZ-FgGzDUTQAGLrJz_h2U1sQ/exec",
+            "https://script.google.com/macros/s/AKfycbyiY3VDk6dkhWOjoYYjdlU73bqJLHIkxhJCAcmqnCchIck09pij1BSXrpGs3RG0_jnStg/exec",
           qrApi:
             "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=",
           defaultProfile:

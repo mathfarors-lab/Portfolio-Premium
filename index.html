@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
-    />
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
+      content="black-translucent" />
     <meta name="theme-color" content="#092743" />
 
     <title>Rumduol Manager Pro</title>
@@ -18,8 +16,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Moul&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <style>
       :root {
@@ -38,7 +35,7 @@
         color: white;
         font-family: "Inter", sans-serif;
         -webkit-tap-highlight-color: transparent;
-        /* REMOVED: user-select: none; (This caused the phone input bug on mobile) */
+        /* បានដក user-select ចេញ ដើម្បីអាចវាយអក្សរ និងលេខទូរស័ព្ទបានធម្មតា */
         min-height: 100vh;
         overflow-x: hidden;
       }
@@ -73,7 +70,7 @@
         font-size: 14px;
         outline: none;
         transition: all 0.2s;
-        user-select: auto; /* Ensures form fields remain selectable */
+        user-select: auto; /* ធានាថាអាចវាយនិង Copy/Paste បាន */
       }
       .input-field:focus {
         border-color: #cb9b51;
@@ -117,31 +114,26 @@
     <!-- 1. 🛡️ LOGIN SCREEN -->
     <div
       id="login-screen"
-      class="fixed inset-0 z-[1000] flex flex-col items-center justify-center bg-[#092743] px-8"
-    >
+      class="fixed inset-0 z-[1000] flex flex-col items-center justify-center bg-[#092743] px-8">
       <div
-        class="w-20 h-20 mb-6 rounded-3xl gold-bg flex items-center justify-center shadow-[0_10px_40px_rgba(203,155,81,0.3)]"
-      >
+        class="w-20 h-20 mb-6 rounded-3xl gold-bg flex items-center justify-center shadow-[0_10px_40px_rgba(203,155,81,0.3)]">
         <svg
           class="w-10 h-10 text-[#092743]"
           fill="none"
           stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
+          viewBox="0 0 24 24">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-          ></path>
+            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
         </svg>
       </div>
       <h1 class="text-3xl font-moul gold-text mb-2 text-center drop-shadow-lg">
         Rumduol Admin
       </h1>
       <p
-        class="text-[#cb9b51]/60 text-[10px] uppercase tracking-[0.4em] mb-10 font-bold"
-      >
+        class="text-[#cb9b51]/60 text-[10px] uppercase tracking-[0.4em] mb-10 font-bold">
         Access Control System
       </p>
 
@@ -150,12 +142,10 @@
           type="password"
           id="pw-input"
           class="input-field text-center text-2xl tracking-[0.5em] mb-6 py-4"
-          placeholder="••••"
-        />
+          placeholder="••••" />
         <button
           onclick="attemptLogin()"
-          class="gold-bg text-[#092743] w-full py-4 rounded-xl font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl"
-        >
+          class="gold-bg text-[#092743] w-full py-4 rounded-xl font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl">
           Unlock App
         </button>
       </div>
@@ -164,39 +154,32 @@
     <!-- 2. 📱 MAIN APP UI -->
     <div
       id="main-app"
-      class="flex flex-col min-h-screen max-w-6xl mx-auto w-full"
-    >
+      class="flex flex-col min-h-screen max-w-6xl mx-auto w-full">
       <header
-        class="p-6 pt-10 md:pt-14 flex justify-between items-center sticky top-0 bg-[#092743]/90 backdrop-blur-md z-40 border-b border-white/5"
-      >
+        class="p-6 pt-10 md:pt-14 flex justify-between items-center sticky top-0 bg-[#092743]/90 backdrop-blur-md z-40 border-b border-white/5">
         <div>
           <h2 class="text-2xl font-moul gold-text">Manager Pro</h2>
           <p
-            class="text-[10px] text-white/40 uppercase tracking-widest mt-1 font-bold"
-          >
+            class="text-[10px] text-white/40 uppercase tracking-widest mt-1 font-bold">
             Safe Identity Storage
           </p>
         </div>
         <button
           onclick="openForm()"
-          class="px-5 py-3 rounded-xl gold-bg flex items-center gap-2 shadow-[0_5px_20px_rgba(203,155,81,0.2)] hover:scale-105 active:scale-95 transition-all"
-        >
+          class="px-5 py-3 rounded-xl gold-bg flex items-center gap-2 shadow-[0_5px_20px_rgba(203,155,81,0.2)] hover:scale-105 active:scale-95 transition-all">
           <svg
             class="w-5 h-5 text-[#092743]"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+            viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2.5"
-              d="M12 4v16m8-8H4"
-            ></path>
+              d="M12 4v16m8-8H4"></path>
           </svg>
-          <span class="text-[#092743] font-bold text-sm hidden md:block"
-            >New Identity</span
-          >
+          <span class="text-[#092743] font-bold text-sm hidden md:block">New
+            Identity</span>
         </button>
       </header>
 
@@ -206,29 +189,25 @@
             class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-white/30"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+            viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            ></path>
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <input
             type="text"
             id="search"
             onkeyup="renderList()"
             placeholder="Search for customer name..."
-            class="input-field pl-12 py-4"
-          />
+            class="input-field pl-12 py-4" />
         </div>
       </div>
 
       <div
         id="user-list"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 pb-32"
-      >
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 pb-32">
         <!-- Cards will load here -->
       </div>
     </div>
@@ -236,26 +215,21 @@
     <!-- 3. 🔐 ACTION CONFIRM MODAL -->
     <div
       id="confirm-modal"
-      class="fixed inset-0 z-[1200] hidden items-center justify-center bg-black/80 backdrop-blur-sm px-6"
-    >
+      class="fixed inset-0 z-[1200] hidden items-center justify-center bg-black/80 backdrop-blur-sm px-6">
       <div
-        class="bg-[#0c3359] w-full max-w-sm rounded-3xl p-8 text-center border border-white/10 shadow-2xl"
-      >
+        class="bg-[#0c3359] w-full max-w-sm rounded-3xl p-8 text-center border border-white/10 shadow-2xl">
         <div
-          class="w-16 h-16 mx-auto bg-red-500/10 text-red-400 rounded-full flex items-center justify-center mb-4 border border-red-500/20"
-        >
+          class="w-16 h-16 mx-auto bg-red-500/10 text-red-400 rounded-full flex items-center justify-center mb-4 border border-red-500/20">
           <svg
             class="w-8 h-8"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+            viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-            ></path>
+              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
           </svg>
         </div>
         <h3 class="text-xl font-moul gold-text mb-2">Confirm Action</h3>
@@ -264,19 +238,16 @@
           type="password"
           id="confirm-pw"
           class="input-field text-center text-xl tracking-[0.5em] mb-6"
-          placeholder="••••"
-        />
+          placeholder="••••" />
         <div class="flex gap-3">
           <button
             onclick="closeConfirm()"
-            class="flex-1 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 font-bold transition-all"
-          >
+            class="flex-1 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 font-bold transition-all">
             Cancel
           </button>
           <button
             onclick="validateAction()"
-            class="flex-1 py-3 rounded-xl gold-bg text-[#092743] font-bold shadow-lg hover:scale-105 active:scale-95 transition-all"
-          >
+            class="flex-1 py-3 rounded-xl gold-bg text-[#092743] font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">
             Confirm
           </button>
         </div>
@@ -286,36 +257,29 @@
     <!-- 4. 📝 DATA FORM MODAL -->
     <div
       id="modal"
-      class="fixed inset-0 z-[1100] hidden flex items-center justify-center bg-black/80 backdrop-blur-md p-4 sm:p-6"
-    >
+      class="fixed inset-0 z-[1100] hidden flex items-center justify-center bg-black/80 backdrop-blur-md p-4 sm:p-6">
       <div
-        class="bg-[#0c3359] w-full max-w-4xl h-[90vh] md:h-[85vh] rounded-[24px] border border-white/10 flex flex-col overflow-hidden shadow-2xl relative"
-      >
+        class="bg-[#0c3359] w-full max-w-4xl h-[90vh] md:h-[85vh] rounded-[24px] border border-white/10 flex flex-col overflow-hidden shadow-2xl relative">
         <div
-          class="px-6 py-5 border-b border-white/10 flex justify-between items-center bg-[#092743]/50 z-10"
-        >
+          class="px-6 py-5 border-b border-white/10 flex justify-between items-center bg-[#092743]/50 z-10">
           <h3
             id="modal-title"
-            class="text-xl md:text-2xl font-moul gold-text drop-shadow-md"
-          >
+            class="text-xl md:text-2xl font-moul gold-text drop-shadow-md">
             New Identity
           </h3>
           <button
             onclick="closeForm()"
-            class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/60 hover:text-white transition-colors"
-          >
+            class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/60 hover:text-white transition-colors">
             <svg
               class="w-6 h-6"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+              viewBox="0 0 24 24">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
+                d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
@@ -323,16 +287,14 @@
         <form
           id="form"
           onsubmit="handleFormSubmit(event)"
-          class="flex flex-col flex-1 overflow-hidden"
-        >
+          class="flex flex-col flex-1 overflow-hidden">
           <input type="hidden" id="u-id" />
 
           <div class="p-6 overflow-y-auto custom-scroll space-y-8 flex-1">
             <!-- Basic Info -->
             <div>
               <h4
-                class="text-[11px] gold-text uppercase font-bold tracking-widest mb-3 flex items-center gap-2"
-              >
+                class="text-[11px] gold-text uppercase font-bold tracking-widest mb-3 flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#cb9b51]"></span>
                 Personal Detail
               </h4>
@@ -342,87 +304,124 @@
                   id="u-name"
                   class="input-field"
                   placeholder="Full Name *"
-                  required
-                />
+                  required />
                 <input
                   type="text"
                   id="u-title"
                   class="input-field"
-                  placeholder="Job Title / Position"
-                />
+                  placeholder="Job Title / Position" />
               </div>
             </div>
 
-            <!-- Enhanced Images Grid (Supports Paste + Preview) -->
+            <!-- Enhanced Images Grid (Supports Upload + Paste Link + Paste Image Ctrl+V) -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Company Logo Upload/Paste Zone -->
               <div
-                id="logo-zone"
-                tabindex="0"
-                class="bg-black/20 p-4 rounded-xl border border-white/5 hover:border-[#cb9b51]/30 focus:border-[#cb9b51] focus:bg-black/40 outline-none transition-all group"
-              >
-                <div class="flex justify-between items-center mb-2">
+                class="bg-black/20 p-4 rounded-xl border border-white/5 focus-within:border-[#cb9b51]/50 transition-colors">
+                <label
+                  class="text-[10px] text-white/60 uppercase font-bold block mb-3">Company
+                  Logo</label>
+                <div class="flex items-center gap-3">
+                  <!-- Image Preview -->
+                  <img
+                    id="preview-logo"
+                    src="https://via.placeholder.com/150?text=Logo"
+                    class="w-14 h-14 rounded-lg object-cover border border-white/10 bg-black/50 flex-shrink-0 shadow-md" />
+
+                  <!-- Input Field (Paste URL or Ctrl+V Image) -->
+                  <input
+                    type="text"
+                    id="u-logo"
+                    placeholder="Paste Link or Ctrl+V Image..."
+                    class="input-field text-xs flex-1 py-3"
+                    oninput="updatePreview('logo')"
+                    onpaste="handlePaste(event, 'logo')" />
+
+                  <!-- Browse File Button -->
                   <label
-                    class="text-[10px] text-white/60 uppercase font-bold block group-focus:text-[#cb9b51]"
-                    >Company Logo</label
-                  >
-                  <span
-                    class="text-[9px] bg-[#cb9b51]/20 text-[#cb9b51] px-2 py-0.5 rounded animate-pulse hidden group-focus:block"
-                    >Ctrl+V to Paste</span
-                  >
+                    for="f-logo"
+                    class="cursor-pointer gold-bg text-[#092743] p-3 rounded-xl shadow-md hover:scale-105 active:scale-95 transition-all flex-shrink-0"
+                    title="Browse File">
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                    </svg>
+                  </label>
+                  <input
+                    type="file"
+                    id="f-logo"
+                    accept="image/*, .png, .jpg, .jpeg, .webp, .heic"
+                    class="hidden"
+                    onchange="handleFileUpload(this, 'logo')" />
                 </div>
-                <!-- Accepts all image types + WebP & HEIC -->
-                <input
-                  type="file"
-                  id="f-logo"
-                  accept="image/*, .png, .jpg, .jpeg, .webp, .heic, .svg"
-                  class="text-xs text-white/80 w-full file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-[#cb9b51]/10 file:text-[#cb9b51] hover:file:bg-[#cb9b51]/20 cursor-pointer"
-                />
-                <img
-                  id="preview-logo"
-                  class="hidden mt-3 h-16 w-16 object-cover rounded-lg border border-white/10 shadow-md"
-                />
               </div>
 
+              <!-- Profile Photo Upload/Paste Zone -->
               <div
-                id="profile-zone"
-                tabindex="0"
-                class="bg-black/20 p-4 rounded-xl border border-white/5 hover:border-[#cb9b51]/30 focus:border-[#cb9b51] focus:bg-black/40 outline-none transition-all group"
-              >
-                <div class="flex justify-between items-center mb-2">
+                class="bg-black/20 p-4 rounded-xl border border-white/5 focus-within:border-[#cb9b51]/50 transition-colors">
+                <label
+                  class="text-[10px] text-white/60 uppercase font-bold block mb-3">Profile
+                  Photo</label>
+                <div class="flex items-center gap-3">
+                  <!-- Image Preview -->
+                  <img
+                    id="preview-profile"
+                    src="https://via.placeholder.com/150?text=Profile"
+                    class="w-14 h-14 rounded-lg object-cover border border-white/10 bg-black/50 flex-shrink-0 shadow-md" />
+
+                  <!-- Input Field (Paste URL or Ctrl+V Image) -->
+                  <input
+                    type="text"
+                    id="u-profile"
+                    placeholder="Paste Link or Ctrl+V Image..."
+                    class="input-field text-xs flex-1 py-3"
+                    oninput="updatePreview('profile')"
+                    onpaste="handlePaste(event, 'profile')" />
+
+                  <!-- Browse File Button -->
                   <label
-                    class="text-[10px] text-white/60 uppercase font-bold block group-focus:text-[#cb9b51]"
-                    >Profile Photo</label
-                  >
-                  <span
-                    class="text-[9px] bg-[#cb9b51]/20 text-[#cb9b51] px-2 py-0.5 rounded animate-pulse hidden group-focus:block"
-                    >Ctrl+V to Paste</span
-                  >
+                    for="f-profile"
+                    class="cursor-pointer gold-bg text-[#092743] p-3 rounded-xl shadow-md hover:scale-105 active:scale-95 transition-all flex-shrink-0"
+                    title="Browse File">
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                    </svg>
+                  </label>
+                  <input
+                    type="file"
+                    id="f-profile"
+                    accept="image/*, .png, .jpg, .jpeg, .webp, .heic"
+                    class="hidden"
+                    onchange="handleFileUpload(this, 'profile')" />
                 </div>
-                <input
-                  type="file"
-                  id="f-profile"
-                  accept="image/*, .png, .jpg, .jpeg, .webp, .heic, .svg"
-                  class="text-xs text-white/80 w-full file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-[#cb9b51]/10 file:text-[#cb9b51] hover:file:bg-[#cb9b51]/20 cursor-pointer"
-                />
-                <img
-                  id="preview-profile"
-                  class="hidden mt-3 h-16 w-16 object-cover rounded-lg border border-white/10 shadow-md"
-                />
               </div>
             </div>
 
             <!-- Phones Container -->
             <div>
               <h4
-                class="text-[11px] gold-text uppercase font-bold tracking-widest mb-3 flex items-center gap-2"
-              >
+                class="text-[11px] gold-text uppercase font-bold tracking-widest mb-3 flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#cb9b51]"></span>
                 Contact Numbers
               </h4>
               <div
                 id="phone-box"
-                class="bg-black/20 p-4 rounded-xl border border-white/5 min-h-[70px]"
-              >
+                class="bg-black/20 p-4 rounded-xl border border-white/5 min-h-[70px]">
                 <!-- Javascript will inject inputs here -->
               </div>
             </div>
@@ -430,111 +429,94 @@
             <!-- Social & Contact Links Grid -->
             <div>
               <h4
-                class="text-[11px] gold-text uppercase font-bold tracking-widest mb-3 flex items-center gap-2"
-              >
+                class="text-[11px] gold-text uppercase font-bold tracking-widest mb-3 flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#cb9b51]"></span>
                 Social & Web Links
               </h4>
               <div
-                class="bg-black/20 p-4 rounded-xl border border-white/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
-              >
+                class="bg-black/20 p-4 rounded-xl border border-white/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 <input
                   type="email"
                   id="u-em"
                   placeholder="Email Address"
-                  class="input-field"
-                />
+                  class="input-field" />
                 <input
                   type="text"
                   id="u-web"
                   placeholder="Website URL"
-                  class="input-field"
-                />
+                  class="input-field" />
                 <input
                   type="text"
                   id="u-tg"
                   placeholder="Telegram Username / Link"
-                  class="input-field"
-                />
+                  class="input-field" />
                 <input
                   type="text"
                   id="u-wa"
                   placeholder="WhatsApp Number"
-                  class="input-field"
-                />
+                  class="input-field" />
                 <input
                   type="text"
                   id="u-fb"
                   placeholder="Facebook Profile URL"
-                  class="input-field"
-                />
+                  class="input-field" />
                 <input
                   type="text"
                   id="u-tk"
                   placeholder="TikTok URL"
-                  class="input-field"
-                />
+                  class="input-field" />
                 <input
                   type="text"
                   id="u-in"
                   placeholder="LinkedIn URL"
-                  class="input-field md:col-span-2 lg:col-span-3"
-                />
+                  class="input-field md:col-span-2 lg:col-span-3" />
               </div>
             </div>
 
             <!-- VCF Data Grid -->
             <div>
               <h4
-                class="text-[11px] text-white/50 uppercase font-bold tracking-widest mb-3 flex items-center gap-2"
-              >
+                class="text-[11px] text-white/50 uppercase font-bold tracking-widest mb-3 flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-white/20"></span> VCF
                 Detail (For Phonebook)
               </h4>
               <div
-                class="bg-black/20 p-4 rounded-xl border border-white/5 grid grid-cols-1 md:grid-cols-2 gap-3 pb-8"
-              >
+                class="bg-black/20 p-4 rounded-xl border border-white/5 grid grid-cols-1 md:grid-cols-2 gap-3 pb-8">
                 <input
                   type="text"
                   id="u-vcf-f"
                   placeholder="First Name"
-                  class="input-field"
-                />
+                  class="input-field" />
                 <input
                   type="text"
                   id="u-vcf-l"
                   placeholder="Last Name"
-                  class="input-field"
-                />
+                  class="input-field" />
                 <input
                   type="text"
                   id="u-vcf-o"
                   placeholder="Organization / Company"
-                  class="input-field md:col-span-2"
-                />
+                  class="input-field md:col-span-2" />
               </div>
             </div>
           </div>
 
+          <!-- Sticky Save Button Footer -->
           <div
-            class="p-6 border-t border-white/10 bg-[#092743]/80 backdrop-blur-md"
-          >
+            class="p-6 border-t border-white/10 bg-[#092743]/80 backdrop-blur-md">
             <button
               type="submit"
-              class="gold-bg text-[#092743] w-full md:w-auto md:min-w-[250px] md:float-right py-4 px-8 rounded-xl font-bold uppercase tracking-widest shadow-[0_5px_20px_rgba(203,155,81,0.3)] hover:scale-105 active:scale-95 transition-all flex justify-center items-center gap-2"
-            >
+              class="gold-bg text-[#092743] w-full md:w-auto md:min-w-[250px] md:float-right py-4 px-8 rounded-xl font-bold uppercase tracking-widest shadow-[0_5px_20px_rgba(203,155,81,0.3)] hover:scale-105 active:scale-95 transition-all flex justify-center items-center gap-2">
               <svg
                 class="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+                viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
-                ></path>
+                  d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path>
               </svg>
               Save Identity
             </button>
@@ -546,13 +528,11 @@
     <!-- 5. ♻️ RESTORE SNACKBAR -->
     <div
       id="restore-bar"
-      class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[1300] bg-white text-black px-6 py-4 rounded-2xl flex justify-between items-center shadow-2xl w-[90%] max-w-sm"
-    >
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[1300] bg-white text-black px-6 py-4 rounded-2xl flex justify-between items-center shadow-2xl w-[90%] max-w-sm">
       <span class="text-sm font-bold">Item deleted.</span>
       <button
         onclick="restoreItem()"
-        class="text-[#092743] font-black uppercase tracking-widest border-l border-black/10 pl-4 hover:text-[#cb9b51] transition-colors"
-      >
+        class="text-[#092743] font-black uppercase tracking-widest border-l border-black/10 pl-4 hover:text-[#cb9b51] transition-colors">
         Restore
       </button>
     </div>
@@ -560,27 +540,31 @@
     <!-- 6. 🌀 LOADER -->
     <div
       id="loader"
-      class="fixed inset-0 z-[2000] hidden items-center justify-center bg-[#092743]/80 backdrop-blur-md"
-    >
+      class="fixed inset-0 z-[2000] hidden items-center justify-center bg-[#092743]/80 backdrop-blur-md">
       <div class="relative w-16 h-16 flex items-center justify-center">
         <div
-          class="absolute inset-0 border-4 border-[#cb9b51]/20 rounded-full"
-        ></div>
+          class="absolute inset-0 border-4 border-[#cb9b51]/20 rounded-full"></div>
         <div
-          class="absolute inset-0 border-4 border-t-[#cb9b51] rounded-full animate-spin"
-        ></div>
+          class="absolute inset-0 border-4 border-t-[#cb9b51] rounded-full animate-spin"></div>
+        <svg
+          class="w-6 h-6 text-[#cb9b51] animate-pulse"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+        </svg>
       </div>
     </div>
 
+    <!-- <script> របស់បងដាក់នៅទីនេះ -->
     <script>
-      /**
-       * 🛡️ RUMDUOL MANAGER PRO - FRONTEND SCRIPT (SECURE & OPTIMIZED)
-       * ដំណើរការកាត់បន្ថយទំហំរូបភាព (Image Compression) និង ការពារសុវត្ថិភាពទិន្នន័យ
-       */
-
-      // 🔗 ដាក់ URL Web App ថ្មីរបស់បងនៅទីនេះ
+      // 🔗 ដាក់ Link Web App របស់បងនៅទីនេះ
       const API =
-        "https://script.google.com/macros/s/AKfycbxEvEMXaXtTPYyPZHZqgBAbJ_53dYWjSKJCdgjxpJZf2mFZ-FgGzDUTQAGLrJz_h2U1sQ/exec";
+        "https://script.google.com/macros/s/AKfycbyiY3VDk6dkhWOjoYYjdlU73bqJLHIkxhJCAcmqnCchIck09pij1BSXrpGs3RG0_jnStg/exec";
 
       let DATA = [];
       let PW = "";
@@ -589,69 +573,11 @@
       let RESTORE_TIMER = null;
 
       // ==========================================
-      // 📸 ១. ប្រព័ន្ធអាប់ឡូតរូបភាព និង Paste រូបភាព
-      // ==========================================
-      function setupImageUploadAndPaste(zoneId, inputId, previewId) {
-        const zone = document.getElementById(zoneId);
-        const fileInput = document.getElementById(inputId);
-        const preview = document.getElementById(previewId);
-
-        // ពេលចុចរើសរូបភាពតាមធម្មតា (Click & Browse)
-        fileInput.addEventListener("change", function () {
-          if (this.files && this.files.length > 0) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-              preview.src = e.target.result;
-              preview.classList.remove("hidden");
-            };
-            reader.readAsDataURL(this.files[0]);
-          } else {
-            preview.classList.add("hidden");
-            preview.src = "";
-          }
-        });
-
-        // ពេលចុច Ctrl+V ដើម្បី Paste រូបភាពចូលផ្ទាល់
-        zone.addEventListener("paste", (e) => {
-          if (e.clipboardData.files.length > 0) {
-            const file = e.clipboardData.files[0];
-            if (file.type.startsWith("image/")) {
-              e.preventDefault();
-
-              // បញ្ចូល file ដែលបាន paste ទៅកាន់ input tag
-              const dataTransfer = new DataTransfer();
-              dataTransfer.items.add(file);
-              fileInput.files = dataTransfer.files;
-
-              // បង្ហាញរូបភាពជា Preview
-              const reader = new FileReader();
-              reader.onload = (ev) => {
-                preview.src = ev.target.result;
-                preview.classList.remove("hidden");
-              };
-              reader.readAsDataURL(file);
-            }
-          }
-        });
-      }
-
-      // ដំណើរការប្រព័ន្ធរូបភាពពេលវេបសាយដើរចប់
-      document.addEventListener("DOMContentLoaded", () => {
-        setupImageUploadAndPaste("logo-zone", "f-logo", "preview-logo");
-        setupImageUploadAndPaste(
-          "profile-zone",
-          "f-profile",
-          "preview-profile",
-        );
-      });
-
-      // ==========================================
-      // 🛡️ ២. ប្រព័ន្ធគ្រប់គ្រងការ Login & Security
+      // 🛡️ 1. AUTHENTICATION (LOGIN)
       // ==========================================
       async function attemptLogin() {
         const val = document.getElementById("pw-input").value;
         if (!val) return;
-
         toggleLoader(true);
         try {
           const res = await fetch(API, {
@@ -661,66 +587,237 @@
           const json = await res.json();
 
           if (json.status === "error") {
-            alert("លេខសម្ងាត់មិនត្រឹមត្រូវ! (Wrong Password)");
+            alert("Incorrect Password!");
           } else {
-            PW = val; // រក្សាទុកលេខសម្ងាត់ក្នុងអង្គចងចាំ (Memory)
-            DATA = json; // រក្សាទុកទិន្នន័យ User
+            PW = val;
+            DATA = json; // Backend returns formatted users with .phones string
             document.getElementById("login-screen").style.display = "none";
             document.getElementById("main-app").style.display = "flex";
             renderList();
           }
         } catch (e) {
-          alert("បរាជ័យក្នុងការតភ្ជាប់។ សូមពិនិត្យមើលអ៊ីនធឺណិត ឬ Web App URL។");
+          alert("Connection error. Please check your internet.");
         }
         toggleLoader(false);
       }
 
-      // ប្រព័ន្ធផ្ទៀងផ្ទាត់ Password ម្តងទៀតមុនពេល លុប, កែប្រែ ឬ មើល
-      function requestAction(type, id) {
-        PENDING_ACTION = { type, id };
-        document.getElementById("confirm-modal").style.display = "flex";
+      // ==========================================
+      // 📝 2. FORM & DATA HANDLING (CRUD)
+      // ==========================================
+
+      // Open Form for New Identity
+      function openForm() {
+        document.getElementById("form").reset();
+        document.getElementById("u-id").value = "";
+        document.getElementById("preview-logo").src =
+          "https://via.placeholder.com/150?text=Logo";
+        document.getElementById("preview-profile").src =
+          "https://via.placeholder.com/150?text=Profile";
+        document.getElementById("modal-title").innerText = "New Identity";
+        setupPhones(""); // Reset to 1 empty phone input
+        document.getElementById("modal").style.display = "flex";
       }
 
-      function closeConfirm() {
-        document.getElementById("confirm-modal").style.display = "none";
-        document.getElementById("confirm-pw").value = "";
+      // Handle Save (Create or Update)
+      async function handleFormSubmit(e) {
+        e.preventDefault();
+        toggleLoader(true);
+
+        // Collect all phone numbers into a comma-separated string
+        const phoneInputs = document.querySelectorAll(".p-in");
+        const phonesString = Array.from(phoneInputs)
+          .map((input) => input.value.trim())
+          .filter((val) => val !== "")
+          .join(",");
+
+        const uData = {
+          id: document.getElementById("u-id").value,
+          name: document.getElementById("u-name").value,
+          title: document.getElementById("u-title").value,
+          logo_img: document.getElementById("u-logo").value,
+          profile_img: document.getElementById("u-profile").value,
+          phones: phonesString, // This matches backend expectation
+          email: document.getElementById("u-em").value,
+          website: document.getElementById("u-web").value,
+          facebook: document.getElementById("u-fb").value,
+          telegram: document.getElementById("u-tg").value,
+          whatsapp: document.getElementById("u-wa").value,
+          tiktok: document.getElementById("u-tk").value,
+          linkedin: document.getElementById("u-in").value,
+          vcf_first: document.getElementById("u-vcf-f").value,
+          vcf_last: document.getElementById("u-vcf-l").value,
+          vcf_org: document.getElementById("u-vcf-o").value,
+        };
+
+        try {
+          const res = await fetch(API, {
+            method: "POST",
+            body: JSON.stringify({
+              action: "saveUser",
+              userData: uData,
+              pw: PW,
+            }),
+          });
+          const result = await res.json();
+          if (result.status === "success") {
+            alert("Data Saved to Cloud!");
+            refreshData();
+          } else {
+            alert("Error: " + result.message);
+          }
+        } catch (e) {
+          alert("Submission failed.");
+        }
+        toggleLoader(false);
       }
 
-      function validateAction() {
-        const inputPw = document.getElementById("confirm-pw").value;
-        if (inputPw !== PW) {
-          alert("លេខសម្ងាត់សុវត្ថិភាពមិនត្រឹមត្រូវ!");
-          return;
-        }
+      // Load Data into Form for Editing
+      function executeEdit(id) {
+        const u = DATA.find((x) => x.id == id);
+        if (!u) return;
 
-        const { type, id } = PENDING_ACTION;
-        closeConfirm();
+        openForm();
+        document.getElementById("modal-title").innerText = "Edit Identity";
+        document.getElementById("u-id").value = u.id;
+        document.getElementById("u-name").value = u.name || "";
+        document.getElementById("u-title").value = u.title || "";
 
-        if (type === "edit") executeEdit(id);
-        if (type === "delete") executeDelete(id);
-        if (type === "view") {
-          const publicUrl = `user.html?id=${id}`;
-          window.open(publicUrl, "_blank");
-        }
+        // Images
+        document.getElementById("u-logo").value = u.logo_img || "";
+        document.getElementById("preview-logo").src =
+          u.logo_img || "https://via.placeholder.com/150?text=Logo";
+        document.getElementById("u-profile").value = u.profile_img || "";
+        document.getElementById("preview-profile").src =
+          u.profile_img || "https://via.placeholder.com/150?text=Profile";
+
+        // Social
+        document.getElementById("u-em").value = u.email || "";
+        document.getElementById("u-web").value = u.website || "";
+        document.getElementById("u-fb").value = u.facebook || "";
+        document.getElementById("u-tg").value = u.telegram || "";
+        document.getElementById("u-wa").value = u.whatsapp || "";
+        document.getElementById("u-tk").value = u.tiktok || "";
+        document.getElementById("u-in").value = u.linkedin || "";
+
+        // VCF
+        document.getElementById("u-vcf-f").value = u.vcf_first || "";
+        document.getElementById("u-vcf-l").value = u.vcf_last || "";
+        document.getElementById("u-vcf-o").value = u.vcf_org || "";
+
+        setupPhones(u.phones); // backend formatUserForFrontend already provides this
       }
 
       // ==========================================
-      // 🗑️ ៣. ប្រព័ន្ធលុប និង ទាញយកមកវិញ (Soft Delete)
+      // 🖼️ 3. IMAGE PROCESSING (COMPRESS & PREVIEW)
+      // ==========================================
+
+      function updatePreview(type) {
+        const val = document.getElementById(`u-${type}`).value;
+        document.getElementById(`preview-${type}`).src =
+          val || `https://via.placeholder.com/150?text=${type}`;
+      }
+
+      function handlePaste(e, type) {
+        const items = (e.clipboardData || e.originalEvent.clipboardData).items;
+        for (let index in items) {
+          const item = items[index];
+          if (item.kind === "file") {
+            const blob = item.getAsFile();
+            handleFileUpload({ files: [blob] }, type);
+            e.preventDefault();
+          }
+        }
+      }
+
+      function handleFileUpload(input, type) {
+        const file = input.files[0];
+        if (!file) return;
+
+        document.getElementById(`preview-${type}`).src =
+          "https://i.gifer.com/ZKZg.gif"; // Loading state
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = new Image();
+          img.onload = function () {
+            const canvas = document.createElement("canvas");
+            const MAX_SIZE = 400;
+            let width = img.width;
+            let height = img.height;
+
+            if (width > height) {
+              if (width > MAX_SIZE) {
+                height *= MAX_SIZE / width;
+                width = MAX_SIZE;
+              }
+            } else {
+              if (height > MAX_SIZE) {
+                width *= MAX_SIZE / height;
+                height = MAX_SIZE;
+              }
+            }
+
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, width, height);
+
+            // Convert to Base64 (JPEG 0.7 quality is best for Google Drive upload)
+            const dataUrl = canvas.toDataURL("image/jpeg", 0.7);
+            document.getElementById(`u-${type}`).value = dataUrl;
+            updatePreview(type);
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+
+      // ==========================================
+      // 📞 4. DYNAMIC PHONE INPUTS (MAX 5)
+      // ==========================================
+      function setupPhones(str) {
+        const box = document.getElementById("phone-box");
+        box.innerHTML = "";
+        const nums = str ? str.split(",") : [""];
+        nums.forEach((n, i) => {
+          if (i >= 5) return;
+          addPhoneInput(n, i === 0);
+        });
+      }
+
+      function addPhoneInput(val = "", isFirst = false) {
+        const box = document.getElementById("phone-box");
+        if (box.querySelectorAll(".p-in").length >= 5) return;
+
+        const div = document.createElement("div");
+        div.className = "flex gap-3 mb-3";
+        div.innerHTML = `
+      <input type="tel" class="p-in input-field" value="${val}" placeholder="Phone Number">
+      ${
+        isFirst
+          ? `<button type="button" onclick="addPhoneInput()" class="gold-bg text-[#092743] font-bold px-5 rounded-xl">Add +</button>`
+          : `<button type="button" onclick="this.parentElement.remove()" class="bg-red-500/20 text-red-400 font-bold px-5 rounded-xl">X</button>`
+      }
+    `;
+        box.appendChild(div);
+      }
+
+      // ==========================================
+      // 🗑️ 5. DELETE & RESTORE LOGIC
       // ==========================================
       function executeDelete(id) {
-        const index = DATA.findIndex((x) => x.id == id);
-        DELETED_CACHE = DATA[index];
-        DATA.splice(index, 1); // លុបចេញពីអេក្រង់សិន
+        const idx = DATA.findIndex((x) => x.id == id);
+        DELETED_CACHE = DATA[idx];
+        DATA.splice(idx, 1);
         renderList();
 
         const bar = document.getElementById("restore-bar");
         bar.classList.add("show");
 
-        // រង់ចាំ ៥វិនាទី បើកមិនចុច Restore ទេ វានឹងលុបពី Server ពិតប្រាកដ
         if (RESTORE_TIMER) clearTimeout(RESTORE_TIMER);
         RESTORE_TIMER = setTimeout(() => {
           bar.classList.remove("show");
-          finalDeleteOnServer(id);
+          if (DELETED_CACHE) finalDeleteOnServer(id);
         }, 5000);
       }
 
@@ -730,8 +827,9 @@
             method: "POST",
             body: JSON.stringify({ action: "deleteUser", id, pw: PW }),
           });
+          DELETED_CACHE = null;
         } catch (e) {
-          console.error("Server delete failed", e);
+          console.error("Delete sync failed");
         }
       }
 
@@ -745,128 +843,31 @@
       }
 
       // ==========================================
-      // 📝 ៤. ប្រព័ន្ធទម្រង់បញ្ជូលទិន្នន័យ (Add & Edit Form)
-      // ==========================================
-      function executeEdit(id) {
-        const u = DATA.find((x) => x.id == id);
-        if (!u) return;
-
-        openForm();
-        document.getElementById("modal-title").innerText = "Edit Identity";
-        document.getElementById("u-id").value = u.id;
-        document.getElementById("u-name").value = u.name || "";
-        document.getElementById("u-title").value = u.title || "";
-
-        // បង្ហាញរូបភាពចាស់ប្រសិនបើមាន
-        if (u.logo_img) {
-          document.getElementById("preview-logo").src = u.logo_img;
-          document.getElementById("preview-logo").classList.remove("hidden");
-        }
-        if (u.profile_img) {
-          document.getElementById("preview-profile").src = u.profile_img;
-          document.getElementById("preview-profile").classList.remove("hidden");
-        }
-
-        // Social Links
-        document.getElementById("u-em").value = u.email || "";
-        document.getElementById("u-web").value = u.website || "";
-        document.getElementById("u-fb").value = u.facebook || "";
-        document.getElementById("u-tg").value = u.telegram || "";
-        document.getElementById("u-wa").value = u.whatsapp || "";
-        document.getElementById("u-tk").value = u.tiktok || "";
-        document.getElementById("u-in").value = u.linkedin || "";
-
-        // VCF Data
-        document.getElementById("u-vcf-f").value = u.vcf_first || "";
-        document.getElementById("u-vcf-l").value = u.vcf_last || "";
-        document.getElementById("u-vcf-o").value = u.vcf_org || "";
-
-        setupPhones(u.phones);
-      }
-
-      async function handleFormSubmit(e) {
-        e.preventDefault();
-        toggleLoader(true);
-
-        try {
-          // យកទិន្នន័យរូបភាព (កាត់បន្ថយទំហំរួចជាស្រេច)
-          const logoData = await getFile("f-logo");
-          const profileData = await getFile("f-profile");
-
-          // ប្រមូលទិន្នន័យទាំងអស់ (លេខទូរស័ព្ទនឹងត្រូវផ្សំជា String តែមួយក្បៀសគ្នា)
-          const uData = {
-            id: document.getElementById("u-id").value,
-            name: document.getElementById("u-name").value,
-            title: document.getElementById("u-title").value,
-            phones: Array.from(document.querySelectorAll(".p-in"))
-              .map((i) => i.value)
-              .join(","), // ផ្សំចូលគ្នាទីនេះ
-            email: document.getElementById("u-em").value,
-            website: document.getElementById("u-web").value,
-            facebook: document.getElementById("u-fb").value,
-            telegram: document.getElementById("u-tg").value,
-            whatsapp: document.getElementById("u-wa").value,
-            tiktok: document.getElementById("u-tk").value,
-            linkedin: document.getElementById("u-in").value,
-            vcf_first: document.getElementById("u-vcf-f").value,
-            vcf_last: document.getElementById("u-vcf-l").value,
-            vcf_org: document.getElementById("u-vcf-o").value,
-          };
-
-          // បញ្ចូលតែរូបភាពណាដែលមានការកែប្រែថ្មី
-          if (logoData) uData.logo_img = logoData;
-          if (profileData) uData.profile_img = profileData;
-
-          // បញ្ជូនទៅ Google Apps Script
-          const res = await fetch(API, {
-            method: "POST",
-            body: JSON.stringify({
-              action: "saveUser",
-              userData: uData,
-              pw: PW,
-            }),
-          });
-
-          const jsonRes = await res.json();
-          if (jsonRes.status === "success") {
-            alert("រក្សាទុករួចរាល់! (Saved Successfully)");
-            setTimeout(refreshData, 1000);
-          } else {
-            alert("បរាជ័យក្នុងការរក្សាទុក: " + jsonRes.message);
-          }
-        } catch (e) {
-          console.error(e);
-          alert("មានបញ្ហាក្នុងការភ្ជាប់ទៅកាន់ Server!");
-        }
-        toggleLoader(false);
-      }
-
-      // ==========================================
-      // 📱 ៥. មុខងារទូទៅក្នុង UI
+      // 🛠️ 6. UI UTILITIES
       // ==========================================
       function renderList() {
         const query = document.getElementById("search").value.toLowerCase();
         const list = document.getElementById("user-list");
         list.innerHTML = "";
 
-        // ស្វែងរកតាមឈ្មោះ
         const filtered = DATA.filter(
           (u) => u.name && u.name.toLowerCase().includes(query),
         );
 
         filtered.forEach((u) => {
           const div = document.createElement("div");
-          div.className = "app-card p-5 flex items-center gap-4";
+          div.className =
+            "app-card p-5 flex items-center gap-4 animate-in fade-in duration-300";
           div.innerHTML = `
-        <img src="${u.profile_img || "https://via.placeholder.com/80"}" class="w-14 h-14 rounded-2xl object-cover border border-white/10 shadow-lg">
+        <img src="${u.profile_img || "https://via.placeholder.com/80"}" class="w-14 h-14 rounded-2xl object-cover border border-white/10">
         <div class="flex-1 min-w-0">
           <h4 class="font-bold truncate text-white">${u.name}</h4>
-          <p class="text-[10px] gold-text uppercase truncate opacity-60">${u.title || "Client"}</p>
+          <p class="text-[10px] gold-text uppercase truncate opacity-60">${u.title || "Identity"}</p>
         </div>
         <div class="flex gap-1">
-          <button onclick="requestAction('view', '${u.id}')" class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 hover:bg-blue-500/40 flex items-center justify-center transition">👁️</button>
-          <button onclick="requestAction('edit', '${u.id}')" class="w-8 h-8 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/40 flex items-center justify-center transition">✏️</button>
-          <button onclick="requestAction('delete', '${u.id}')" class="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 hover:bg-red-500/40 flex items-center justify-center transition">🗑️</button>
+          <button onclick="requestAction('view', '${u.id}')" class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center">👁️</button>
+          <button onclick="requestAction('edit', '${u.id}')" class="w-8 h-8 rounded-lg bg-green-500/20 text-green-400 flex items-center justify-center">✏️</button>
+          <button onclick="requestAction('delete', '${u.id}')" class="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center">🗑️</button>
         </div>
       `;
           list.appendChild(div);
@@ -883,107 +884,39 @@
           renderList();
           closeForm();
         } catch (e) {
-          console.error(e);
+          console.error("Refresh failed");
         }
       }
 
-      // មុខងារបង្កើតប្រអប់លេខទូរស័ព្ទ (បានដល់ ៥ លេខ)
-      function setupPhones(str) {
-        const box = document.getElementById("phone-box");
-        box.innerHTML = ``;
-        const nums = str ? str.split(",") : [""];
-
-        nums.forEach((n, i) => {
-          if (i >= 5) return;
-          const d = document.createElement("div");
-          d.className = "flex gap-2 mb-2";
-          d.innerHTML = `<input type="text" class="p-in input-field py-2 text-sm" value="${n}" placeholder="Phone ${i + 1}">`;
-
-          // បង្កើតប៊ូតុង + នៅជួរទីមួយ
-          if (i === 0) {
-            d.innerHTML += `<button type="button" onclick="addPhone()" class="gold-bg text-[#092743] font-bold px-3 rounded-xl hover:scale-105 transition">+</button>`;
-          }
-          box.appendChild(d);
-        });
+      function requestAction(type, id) {
+        PENDING_ACTION = { type, id };
+        document.getElementById("confirm-modal").style.display = "flex";
       }
 
-      function addPhone() {
-        if (document.querySelectorAll(".p-in").length >= 5) return; // កំណត់ត្រឹម ៥ លេខ
-        const d = document.createElement("div");
-        d.innerHTML = `<input type="text" class="p-in input-field py-2 text-sm mt-2 border-t border-white/5" placeholder="Extra Phone">`;
-        document.getElementById("phone-box").appendChild(d);
+      function validateAction() {
+        const inputPw = document.getElementById("confirm-pw").value;
+        if (inputPw !== PW) {
+          alert("Invalid Admin Password");
+          return;
+        }
+
+        const { type, id } = PENDING_ACTION;
+        closeConfirm();
+        if (type === "edit") executeEdit(id);
+        if (type === "delete") executeDelete(id);
+        if (type === "view") window.open(`user.html?id=${id}`, "_blank");
       }
 
-      function toggleLoader(s) {
-        document.getElementById("loader").style.display = s ? "flex" : "none";
+      function closeConfirm() {
+        document.getElementById("confirm-modal").style.display = "none";
+        document.getElementById("confirm-pw").value = "";
       }
 
       function closeForm() {
         document.getElementById("modal").style.display = "none";
       }
-
-      function openForm() {
-        document.getElementById("form").reset();
-        document.getElementById("u-id").value = "";
-        document.getElementById("modal-title").innerText = "New Identity";
-
-        // សម្អាតទិន្នន័យរូបភាពចាស់ចេញ
-        document.getElementById("preview-logo").classList.add("hidden");
-        document.getElementById("preview-logo").src = "";
-        document.getElementById("preview-profile").classList.add("hidden");
-        document.getElementById("preview-profile").src = "";
-
-        setupPhones("");
-        document.getElementById("modal").style.display = "flex";
-      }
-
-      // ==========================================
-      // 🚀 ៦. ប្រព័ន្ធបង្រួមរូបភាព (AUTOMATIC COMPRESSOR)
-      // ការពារមិនអោយ Error ពេលរូបភាពមានទំហំធំពេក (លើសពី 2MB)
-      // ==========================================
-      function getFile(id) {
-        const fileInput = document.getElementById(id);
-        if (!fileInput.files || fileInput.files.length === 0) return null;
-
-        return new Promise((resolve) => {
-          const file = fileInput.files[0];
-          const reader = new FileReader();
-          reader.readAsDataURL(file);
-
-          reader.onload = (e) => {
-            const img = new Image();
-            img.src = e.target.result;
-
-            img.onload = () => {
-              const canvas = document.createElement("canvas");
-              // កំណត់ទំហំអតិបរមា 800px ដើម្បរក្សាគុណភាពច្បាស់ តែទំហំ File តូច
-              const MAX_WIDTH = 800;
-              const MAX_HEIGHT = 800;
-              let width = img.width;
-              let height = img.height;
-
-              if (width > height) {
-                if (width > MAX_WIDTH) {
-                  height *= MAX_WIDTH / width;
-                  width = MAX_WIDTH;
-                }
-              } else {
-                if (height > MAX_HEIGHT) {
-                  width *= MAX_HEIGHT / height;
-                  height = MAX_HEIGHT;
-                }
-              }
-
-              canvas.width = width;
-              canvas.height = height;
-              const ctx = canvas.getContext("2d");
-              ctx.drawImage(img, 0, 0, width, height);
-
-              // បំប្លែងទៅជា JPEG និងទាញយកគុណភាពត្រឹម 80%
-              resolve(canvas.toDataURL("image/jpeg", 0.8));
-            };
-          };
-        });
+      function toggleLoader(s) {
+        document.getElementById("loader").style.display = s ? "flex" : "none";
       }
     </script>
   </body>
